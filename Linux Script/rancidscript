@@ -1,0 +1,12 @@
+ip=$1
+host=$2
+dev=$3
+
+domain="testdomain.com"
+
+
+rancidRouterDB = PATH/TO/RANCIDS/router.db #PLEASE UPDATE TO THE CURRENT router.db FILE PATH
+
+echo -e $1'\t'$2.$domain >> /etc/hosts'
+
+echo $2.$domain:$3:up >> $rancidRouterDB
